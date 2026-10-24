@@ -1,0 +1,263 @@
+# ⚡ SkillForge AI — Autonomous AI Career Architect & Portfolio Platform
+
+[![Next.js 15](https://img.shields.io/badge/Next.js-15.0_App_Router-black?logo=next.js)](https://nextjs.org/)
+[![React 19](https://img.shields.io/badge/React-19-blue?logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178c6?logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS_v4-38bdf8?logo=tailwindcss)](https://tailwindcss.com/)
+[![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL_%26_RLS-3ecf8e?logo=supabase)](https://supabase.com/)
+[![Google Gemini](https://img.shields.io/badge/AI_Engine-Gemini_1.5_Flash-orange?logo=google)](https://aistudio.google.com/)
+[![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen)]()
+[![Automated Tests](https://img.shields.io/badge/Tests-9%2F9_Passed-brightgreen)]()
+
+> **Datheon AI Mastery & Capstone Project**  
+> An enterprise-grade, full-stack AI micro-SaaS engineered to help students, fresh graduates, and career-switchers transform raw ambitions into structured learning plans, portfolio projects, and actionable career development roadmaps.
+
+---
+
+## 🌟 Key Features
+
+### 1. 🚀 Responsive Marketing Landing Page
+- **Value Proposition Hero**: Clear problem/solution articulation targeting student-to-senior transitions.
+- **Interactive Dashboard Preview**: Try checking off live roadmap tasks and exploring skills-gap graphs before creating an account.
+- **Feature Showcase**: 6 high-leverage capabilities detailing diagnostics, milestones, and security.
+- **3-Step Acceleration Workflow**: Step-by-step guidance through definition, AI synthesis, and shipping.
+- **Audience Matrix**: Tailored solutions for Computer Science students, fresh graduates, career switchers, and engineers pivoting to AI.
+- **Interactive FAQ**: Comprehensive answers regarding AI models, data privacy, and portfolio deliverables.
+- **Persistent Theme Toggle**: Seamless dark and light surfaces respecting user preferences via `localStorage`.
+
+### 2. 📝 Lead Capture Engine
+- Validates name, email, and optional career aspirations with client-side and server-side checks.
+- Rate-limiting protection (5 submissions/min per IP) and duplicate suppression within 5 minutes.
+- Direct persistence to Supabase `leads` table with fallback local caching.
+
+### 3. 🔐 Enterprise Authentication & Data Isolation (Supabase RLS)
+- Complete registration, login, logout, and persistent session synchronization.
+- **1-Click Reviewer Demo Account**: Instant test access to the full dashboard without entering credentials.
+- **PostgreSQL Row-Level Security (RLS)**: Enforces strict cryptographic isolation where users can only view, create, update, and delete their own roadmaps and tasks.
+- Cross-tenant cascade protection ensuring tasks cannot be attached to foreign roadmaps.
+
+### 4. 📊 Personal Engineering Dashboard & Task Studio
+- High-level metric gauges: Active Roadmaps, Tasks Completed, Overall Velocity, and Capstone Readiness.
+- Roadmap collection grid with status filtering (`All`, `Active`, `Completed`).
+- Full CRUD operations: Create custom roadmaps, edit descriptions, toggle completion states, and delete roadmaps.
+- Granular task manager with optimistic completion checkboxes, priority badges (`High`, `Medium`, `Low`), and due date tracking.
+
+### 5. 🧠 SkillForge AI Career Architect
+- **Inputs**: Current skills toolbelt, target dream role, experience tier, weekly available study hours, and project interests.
+- **Outputs**:
+  - Concise skills-gap analysis with quantitative proficiency percentages.
+  - Phased learning milestones with completion criteria and time estimates.
+  - Production-grade portfolio capstone blueprint with architecture summary, recommended stack, and key deliverables.
+  - Actionable weekly tasks and potential challenges.
+- **1-Click Import**: Converts AI recommendations into active, trackable dashboard roadmaps and database tasks instantly.
+- **Multi-Provider Resilience**: Supports Google Gemini 1.5/2.0, OpenAI GPT-4o, and deterministic offline fallback.
+
+---
+
+## 🏗️ System Architecture
+
+```
++-------------------------------------------------------------------------------+
+|                             CLIENT APPLICATION                                |
+|  - Next.js 15 App Router (React 19, Turbopack, Tailwind CSS v4)              |
+|  - Isomorphic ThemeProvider (Dark / Light with localStorage persistence)     |
+|  - Isomorphic AuthProvider (Supabase Auth + 1-Click Demo Session)            |
+|  - Interactive Dashboard & Roadmap Task Manager (Optimistic Updates)          |
++-------------------------------------------------------------------------------+
+                                      |
+                     HTTPS / JSON RPC | Cookie Sessions
+                                      v
++-------------------------------------------------------------------------------+
+|                       API & ORCHESTRATION LAYER                               |
+|  - Next.js Middleware Session Refresh & Route Guards                          |
+|  - Rate-Limiting Engine (Token Bucket / IP Sliding Window)                    |
+|  - /api/leads: Validation, Sanitization, Duplicate Suppression                |
+|  - /api/ai/architect: Career Architect Prompt Engine                          |
+|  - Multi-Provider Adapter (Google Gemini 1.5, OpenAI GPT-4o, Deterministic)  |
+|  - Zod / Schema Validator & Output Sanitizer                                  |
++-------------------------------------------------------------------------------+
+                        |                               |
+       PostgreSQL / RLS |                               | Model REST API
+                        v                               v
++-------------------------------+               +-------------------------------+
+|     SUPABASE DATA LAYER       |               |        AI PROVIDERS           |
+|  - auth.users                 |               |  - Google Gemini 1.5 Flash    |
+|  - profiles                   |               |  - OpenAI GPT-4o-mini         |
+|  - roadmaps                   |               |  - Deterministic Fallback     |
+|  - roadmap_tasks              |               |    Engine (Zero-Cost Testing) |
+|  - leads                      |               +-------------------------------+
++-------------------------------+
+```
+
+For detailed sequence diagrams, see [ARCHITECTURE.md](ARCHITECTURE.md).
+
+---
+
+## 📁 Repository Structure
+
+```
+.
+├── src/
+│   ├── app/
+│   │   ├── api/
+│   │   │   ├── ai/architect/route.ts  # Protected AI Career Architect endpoint
+│   │   │   └── leads/route.ts         # Lead capture endpoint with rate limiting
+│   │   ├── dashboard/
+│   │   │   ├── ai-architect/page.tsx  # Career Architect AI generator wizard
+│   │   │   ├── roadmaps/[id]/page.tsx # Roadmap details & task tracker view
+│   │   │   ├── layout.tsx             # Studio header, navigation, & session guards
+│   │   │   └── page.tsx               # Metric cards, roadmaps list, & filters
+│   │   ├── globals.css                # Design system tokens, glassmorphism, & dark mode
+│   │   ├── layout.tsx                 # Root layout with ThemeProvider & AuthProvider
+│   │   └── page.tsx                   # Public marketing landing page
+│   ├── components/
+│   │   ├── auth/
+│   │   │   └── AuthModal.tsx          # Login, Register, & 1-Click Demo Account modal
+│   │   ├── dashboard/
+│   │   │   ├── CreateRoadmapModal.tsx # Manual roadmap creation modal
+│   │   │   └── TaskManager.tsx        # Optimistic task CRUD & status toggles
+│   │   ├── landing/
+│   │   │   ├── Navbar.tsx             # Responsive header with theme switcher
+│   │   │   ├── Hero.tsx               # High-impact value proposition
+│   │   │   ├── DashboardPreview.tsx   # Live interactive preview widget
+│   │   │   ├── Features.tsx           # 6 feature capability cards
+│   │   │   ├── Workflow.tsx           # 3-step career acceleration sequence
+│   │   │   ├── UseCases.tsx           # Audience benefit matrix
+│   │   │   ├── FAQ.tsx                # Interactive accordion FAQ
+│   │   │   ├── LeadCapture.tsx        # Early access form with validation
+│   │   │   └── Footer.tsx             # Sitemap, trust badges, & links
+│   │   └── ui/
+│   │       ├── Badge.tsx              # Semantic badge variants
+│   │       ├── Button.tsx             # Button with loading states & variants
+│   │       ├── Card.tsx               # Glowing border cards
+│   │       └── Input.tsx              # Input with floating labels & icons
+│   ├── context/
+│   │   ├── AuthContext.tsx            # Session listener & demo fallback
+│   │   └── ThemeContext.tsx           # Dark/light mode persistence
+│   ├── lib/
+│   │   ├── ai/
+│   │   │   ├── prompts.ts             # Prompt engineering & deterministic engine
+│   │   │   └── schema.ts              # Zod schema definitions & output validator
+│   │   ├── supabase/
+│   │   │   ├── client.ts              # Browser Supabase SSR client
+│   │   │   └── server.ts              # Server-side cookie-based Supabase client
+│   │   └── store.ts                   # Unified data store with localStorage sync
+│   └── middleware.ts                  # Route protection & cookie synchronizer
+├── supabase/
+│   └── migrations/
+│       ├── 20261024000001_initial_schema.sql      # Tables, indexes, & triggers
+│       └── 20261024000002_rls_security_policies.sql # Strict RLS policies
+├── scripts/
+│   └── run-tests.mjs                  # Automated verification test suite
+├── ARCHITECTURE.md                    # Deep architectural documentation
+├── SECURITY_CHECKLIST.md              # OWASP ASVS verification & security audit
+├── LINKEDIN_DEMO.md                   # 2-3 minute technical video narration script
+└── .env.example                       # Environment variable template
+```
+
+---
+
+## ⚡ Quick Start & Local Development
+
+### 1. Prerequisites
+- **Node.js**: v20+ or v24+
+- **npm**: v10+ or v11+
+- **Git**
+
+### 2. Clone & Install Dependencies
+```bash
+git clone https://github.com/vijaymahes9080/Datheon_Vibe_Coding_Mastery_-_Capstone_Project.git
+cd Datheon_Vibe_Coding_Mastery_-_Capstone_Project
+
+npm install
+```
+
+### 3. Environment Configuration
+Create a `.env.local` file from the provided `.env.example`:
+```bash
+cp .env.example .env.local
+```
+*(Note: If you run without external credentials, SkillForge AI automatically operates in zero-credential demo mode with instant test accounts and deterministic AI synthesis).*
+
+### 4. Run Development Server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## 🧪 Testing & Automated Verification
+
+Run the automated test suite verifying AI schema validation, rate-limiting guards, and Supabase RLS multi-tenant isolation:
+
+```bash
+npm test
+```
+
+Expected output:
+```text
+=======================================================
+🚀 Starting SkillForge AI Automated Test Suite
+=======================================================
+
+🔹 Suite 1: AI Career Architect Schema & Validator Tests
+  ✓ PASS: Valid AI response conforms to schema and sanitizes correctly
+  ✓ PASS: Malformed AI response is safely rejected without crash
+
+🔹 Suite 2: Lead Submission & Anti-Abuse Guards
+  ✓ PASS: Valid lead submission passes validation
+  ✓ PASS: Invalid email rejects with descriptive error
+  ✓ PASS: Empty name rejects with descriptive error
+
+🔹 Suite 3: Supabase Row-Level Security (RLS) Verification
+  ✓ PASS: User can read only their own roadmaps (Tenant Isolation)
+  ✓ PASS: Cross-tenant task manipulation is blocked by RLS constraint
+
+🔹 Suite 4: Task Lifecycle & Completion Velocity Metrics
+  ✓ PASS: Velocity correctly computes percentage of completed tasks
+  ✓ PASS: Empty task set yields 0% velocity without division by zero
+
+=======================================================
+📊 Test Results: 9 passed, 0 failed
+=======================================================
+```
+
+To verify production compilation with Turbopack:
+```bash
+npm run build
+```
+
+---
+
+## 🔒 Security Architecture (OWASP Verified)
+
+1. **Row-Level Security (RLS)**: PostgreSQL tables are locked so authenticated callers cannot query or mutate records belonging to other tenants.
+2. **Existential Subquery Check**: Prevents users from injecting tasks into foreign roadmaps.
+3. **No Secret Leakage**: Private keys (`SUPABASE_SERVICE_ROLE_KEY`, `GEMINI_API_KEY`) are accessed strictly within server route handlers.
+4. **Rate Limiting**: AI and lead capture endpoints enforce strict IP sliding window rate limits.
+5. For complete details, see [SECURITY_CHECKLIST.md](SECURITY_CHECKLIST.md).
+
+---
+
+## 🚀 Deployment Guide (Vercel)
+
+1. Push your changes to GitHub on the `main` branch.
+2. Import the repository into your [Vercel Dashboard](https://vercel.com).
+3. In Project Settings > Environment Variables, configure:
+   - `NEXT_PUBLIC_SUPABASE_URL`
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+   - `SUPABASE_SERVICE_ROLE_KEY`
+   - `GEMINI_API_KEY` (or `OPENAI_API_KEY`)
+4. Click **Deploy**. Vercel will run `npm run build` with Turbopack and deploy to an edge-accelerated HTTPS URL.
+
+---
+
+## 🤝 Demonstration & Video Walkthrough
+
+A 2-3 minute technical video walkthrough script and LinkedIn release caption are ready in [LINKEDIN_DEMO.md](LINKEDIN_DEMO.md).
+
+---
+
+## 📄 License
+This project is open-source under the [MIT License](LICENSE). Built for the Datheon Vibe Coding Mastery & Capstone Challenge by [vijaymahes9080](https://github.com/vijaymahes9080).
