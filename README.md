@@ -140,6 +140,9 @@ A comprehensive release package and video demonstration script are prepared in *
 
 ```
 .
+├── .github/
+│   └── workflows/
+│       └── deploy.yml                 # Automated GitHub Pages CI/CD & gh-pages sync
 ├── src/
 │   ├── app/
 │   │   ├── api/
@@ -298,8 +301,37 @@ npm run build
 
 ---
 
-## 🚀 Deployment Guide (Vercel)
+## 🌐 GitHub Pages Build & Deployment Guide
 
+SkillForge AI features an automated CI/CD deployment pipeline via GitHub Actions supporting **both** modern GitHub Actions deployment and traditional branch-based publishing:
+
+### ⚙️ Enabling GitHub Pages in Repository Settings
+
+1. Open your repository on GitHub: [`vijaymahes9080/Datheon_Vibe_Coding_Mastery_-_Capstone_Project`](https://github.com/vijaymahes9080/Datheon_Vibe_Coding_Mastery_-_Capstone_Project).
+2. Navigate to **Settings** > **Pages** (under "Code and automation").
+3. Under **Build and deployment**, configure:
+
+#### Option A: Source = **GitHub Actions** (Recommended by GitHub)
+- **Source**: Select **`GitHub Actions`** from the dropdown menu.
+- **Branch**: No selection required! GitHub will automatically execute `.github/workflows/deploy.yml` upon push.
+- **Live URL**: `https://vijaymahes9080.github.io/Datheon_Vibe_Coding_Mastery_-_Capstone_Project/`
+
+#### Option B: Source = **Deploy from a branch** (Classic Branch Mode)
+- **Source**: Select **`Deploy from a branch`**.
+- **Branch**: Select **`gh-pages`**, Folder: **`/ (root)`**, then click **Save**.
+- *(Our automated GitHub Actions workflow compiles the static site and automatically synchronizes the `gh-pages` branch).*
+
+### 🛠️ What the Automated Pipeline Does (`.github/workflows/deploy.yml`)
+1. **Automated Verification**: Runs the full automated test suite (`npm test`) to guarantee zero regressions.
+2. **Static HTML Export**: Builds the production bundle with `output: 'export'`, `basePath` subpath routing, and unoptimized images.
+3. **NoJekyll Marker**: Creates `out/.nojekyll` so GitHub Pages serves `_next/` JavaScript and CSS bundles without restriction.
+4. **Dual Deployment**: Deploys via official `actions/deploy-pages@v4` while concurrently maintaining the `gh-pages` branch.
+
+---
+
+## 🚀 Full-Stack Serverless Deployment Guide (Vercel)
+
+For live dynamic model inference with real-time Gemini/OpenAI API keys and PostgreSQL cookie sessions:
 1. Push your changes to GitHub on the `main` branch.
 2. Import the repository into your [Vercel Dashboard](https://vercel.com).
 3. In Project Settings > Environment Variables, configure:

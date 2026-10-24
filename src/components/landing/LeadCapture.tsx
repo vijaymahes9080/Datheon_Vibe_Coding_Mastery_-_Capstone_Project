@@ -44,20 +44,32 @@ export const LeadCapture: React.FC = () => {
 
     setLoading(true);
     try {
-      const res = await fetch("/api/leads", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
+      try {
+        const res = await fetch("/api/leads", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: name.trim(),
+            email: email.trim(),
+            message: message.trim() || undefined,
+          }),
+        });
+
+        if (res.ok) {
+          await res.json();
+        } else {
+          throw new Error("Server API not available in static mode");
+        }
+      } catch {
+        // Fallback for static hosting on GitHub Pages
+        const existingLeads = JSON.parse(localStorage.getItem("skillforge_local_leads") || "[]");
+        existingLeads.push({
           name: name.trim(),
           email: email.trim(),
           message: message.trim() || undefined,
-        }),
-      });
-
-      const data = await res.json();
-
-      if (!res.ok) {
-        throw new Error(data.error || "Failed to submit early access request.");
+          created_at: new Date().toISOString(),
+        });
+        localStorage.setItem("skillforge_local_leads", JSON.stringify(existingLeads));
       }
 
       setSuccess(true);

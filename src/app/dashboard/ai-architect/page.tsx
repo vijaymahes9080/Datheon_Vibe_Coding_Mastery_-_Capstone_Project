@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
 import { DataStore } from "@/lib/store";
 import { CareerArchitectResponse } from "@/lib/ai/schema";
+import { getDemoFallbackResponse } from "@/lib/ai/prompts";
 import {
   Sparkles,
   ArrowLeft,
@@ -90,25 +91,43 @@ export default function AiArchitectPage() {
     setSavedSuccess(false);
 
     try {
-      const res = await fetch("/api/ai/architect", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
+      let data: CareerArchitectResponse | null = null;
+      let usedProvider = "Google Gemini 1.5 Flash";
+
+      try {
+        const res = await fetch("/api/ai/architect", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            targetRole,
+            experienceLevel,
+            weeklyHours,
+            currentSkills,
+            projectInterests,
+          }),
+        });
+
+        if (res.ok) {
+          const json = await res.json();
+          data = json.data;
+          usedProvider = json.provider || "Career Architect";
+        } else {
+          throw new Error("API route not available in static mode");
+        }
+      } catch {
+        // Fallback for static hosting on GitHub Pages
+        data = getDemoFallbackResponse({
           targetRole,
           experienceLevel,
           weeklyHours,
           currentSkills,
           projectInterests,
-        }),
-      });
-
-      const json = await res.json();
-      if (!res.ok) {
-        throw new Error(json.error || "Failed to generate roadmap.");
+        });
+        usedProvider = "SkillForge Deterministic Engine (GitHub Pages Demo)";
       }
 
-      setResult(json.data);
-      setProvider(json.provider || "Career Architect");
+      setResult(data);
+      setProvider(usedProvider);
     } catch (err: any) {
       setError(err.message || "An unexpected error occurred during synthesis.");
     } finally {

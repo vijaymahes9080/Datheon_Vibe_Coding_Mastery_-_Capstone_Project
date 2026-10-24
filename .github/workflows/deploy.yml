@@ -1,0 +1,71 @@
+name: Deploy SkillForge AI to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages and pushing to gh-pages branch
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+
+      - name: Install Dependencies
+        run: npm ci || npm install
+
+      - name: Run Automated Test Suite
+        run: npm test
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build Next.js Static Export
+        env:
+          BUILD_TARGET: export
+          GITHUB_ACTIONS: "true"
+          NEXT_PUBLIC_BASE_PATH: /Datheon_Vibe_Coding_Mastery_-_Capstone_Project
+        run: |
+          npm run build
+          touch out/.nojekyll
+
+      # Deployment Path A: Native GitHub Pages deployment (When Source = "GitHub Actions")
+      - name: Upload GitHub Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      # Deployment Path B: gh-pages branch publication (When Source = "Deploy from a branch")
+      - name: Deploy to gh-pages Branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          publish_branch: gh-pages
+          force_orphan: true
