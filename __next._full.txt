@@ -1,0 +1,29 @@
+1:"$Sreact.fragment"
+2:"/Datheon_Vibe_Coding_Mastery_-_Capstone_Project/_next/static/chunks/21d1yad3w61zy.js"
+3:"/Datheon_Vibe_Coding_Mastery_-_Capstone_Project/_next/static/chunks/1y6skf4t69d8g.js"
+4:I[9876,["$2","$3"],"ThemeProvider"]
+5:I[32341,["$2","$3"],"AuthProvider"]
+6:I[39756,["$2","$3"],"default"]
+7:I[37457,["$2","$3"],"default"]
+9:I[47257,["$2","$3"],"ClientPageRoot"]
+a:"/Datheon_Vibe_Coding_Mastery_-_Capstone_Project/_next/static/chunks/1d1xknm6f6gkr.js"
+b:"/Datheon_Vibe_Coding_Mastery_-_Capstone_Project/_next/static/chunks/0-0gi29d6c631.js"
+c:I[52683,["$2","$3","$a","$b"],"default"]
+f:I[97367,["$2","$3"],"OutletBoundary"]
+10:"$Sreact.suspense"
+12:"ViewportBoundary"
+13:I[97367,["$2","$3"],"$12"]
+15:"MetadataBoundary"
+16:I[97367,["$2","$3"],"$15"]
+18:I[68027,["$2","$3"],"default",1]
+:HL["/Datheon_Vibe_Coding_Mastery_-_Capstone_Project/_next/static/chunks/0wda6wpgi2g-t.css","style"]
+:HL["/Datheon_Vibe_Coding_Mastery_-_Capstone_Project/_next/static/media/07a39a8a4660cc7c-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/Datheon_Vibe_Coding_Mastery_-_Capstone_Project/_next/static/media/605ce01b664af129-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+8:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":[["$","$L9",null,{"Component":"$c","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@d","$@e"]}}],[["$","script","script-0",{"src":"/Datheon_Vibe_Coding_Mastery_-_Capstone_Project/_next/static/chunks/1d1xknm6f6gkr.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/Datheon_Vibe_Coding_Mastery_-_Capstone_Project/_next/static/chunks/0-0gi29d6c631.js","async":true,"nonce":"$undefined"}]],["$","$Lf",null,{"children":["$","$10",null,{"name":"Next.MetadataOutlet","children":"$@11"}]}]]}],"p":false,"v":null}}]]
+0:{"P":null,"c":["",""],"q":"","i":false,"t":{"t":{"s":"","h":528,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/Datheon_Vibe_Coding_Mastery_-_Capstone_Project/_next/static/chunks/0wda6wpgi2g-t.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/Datheon_Vibe_Coding_Mastery_-_Capstone_Project/_next/static/chunks/21d1yad3w61zy.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/Datheon_Vibe_Coding_Mastery_-_Capstone_Project/_next/static/chunks/1y6skf4t69d8g.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"className":"dark","children":["$","body",null,{"className":"T19VSG_variable _8Li5zG_variable antialiased min-h-screen flex flex-col transition-colors duration-200","children":["$","$L4",null,{"children":["$","$L5",null,{"children":["$","$L6",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]}]}]]}],"p":false,"v":null},"c":"$Q8"},"h":{"r":["$","$1","h",{"children":[null,["$","$L13",null,{"children":"$L14"}],["$","$L16",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$10",null,{"name":"Next.Metadata","children":"$L17"}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":false,"v":null}},"m":"$undefined","G":["$18",[["$","link","0",{"rel":"stylesheet","href":"/Datheon_Vibe_Coding_Mastery_-_Capstone_Project/_next/static/chunks/0wda6wpgi2g-t.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"anPfdJfwBbnYPs3Os8JAH"}
+d:{}
+e:"$8:0:1:d:r:props:children:0:props:serverProvidedParams:params"
+14:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5"}]]
+19:I[27201,["$2","$3"],"IconMark"]
+11:null
+17:[["$","title","0",{"children":"SkillForge AI — Career Acceleration & Roadmap Platform"}],["$","meta","1",{"name":"description","content":"Transform skills, aspirations, and project concepts into structured learning milestones, real-world portfolio architectures, and measurable career momentum with AI."}],["$","meta","2",{"name":"author","content":"SkillForge AI Engineering Team"}],["$","meta","3",{"name":"keywords","content":"AI career architect,software engineering roadmaps,developer portfolio,skills gap analysis,career roadmaps"}],["$","link","4",{"rel":"icon","href":"/Datheon_Vibe_Coding_Mastery_-_Capstone_Project/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L19","5",{}]]

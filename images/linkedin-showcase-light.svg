@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="li-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#EEF2FF"/>
+    </linearGradient>
+    <filter id="li-shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+    <pattern id="li-dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.5" fill="#CBD5E1" opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#li-bg)"/>
+  <rect width="1200" height="630" fill="url(#li-dots)"/>
+
+  <!-- Top Accent Ribbon -->
+  <rect width="1200" height="6" fill="#4F46E5"/>
+
+  <!-- Top Badges -->
+  <g transform="translate(60, 42)">
+    <rect x="0" y="0" width="450" height="32" rx="16" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.2"/>
+    <circle cx="16" cy="16" r="4" fill="#4F46E5"/>
+    <text x="28" y="21" font-family="system-ui, sans-serif" font-size="11.5" font-weight="800" fill="#4338CA" letter-spacing="0.5">DATHEON VIBE CODING MASTERY CAPSTONE PROJECT</text>
+
+    <!-- Version Badge -->
+    <rect x="940" y="0" width="140" height="32" rx="16" fill="#DCFCE7" stroke="#86EFAC" stroke-width="1.2"/>
+    <circle cx="956" cy="16" r="4" fill="#16A34A"/>
+    <text x="968" y="21" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#166534">v1.0 Launched</text>
+  </g>
+
+  <!-- Title & Headline -->
+  <g transform="translate(60, 115)">
+    <text font-family="system-ui, sans-serif" font-size="44" font-weight="900" fill="#0F172A" letter-spacing="-1">
+      ⚡ SkillForge AI
+    </text>
+    <text y="42" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="#334155">
+      Autonomous AI Career Architect &amp; Portfolio Platform
+    </text>
+    <text y="72" font-family="system-ui, sans-serif" font-size="15" font-weight="500" fill="#64748B">
+      Full-Stack Micro-SaaS: Transforming developer ambitions into structured roadmaps and verifiable capstones.
+    </text>
+  </g>
+
+  <!-- 4 Feature Pillars Grid -->
+  <g transform="translate(60, 220)">
+    <!-- Box 1: AI Career Architect -->
+    <g transform="translate(0, 0)" filter="url(#li-shadow)">
+      <rect width="255" height="260" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+      <rect width="255" height="36" rx="12" fill="#FEF3C7"/>
+      <path d="M 0 26 L 0 36 L 255 36 L 255 26 Z" fill="#FEF3C7"/>
+      <text x="14" y="23" font-family="system-ui, sans-serif" font-size="12" font-weight="800" fill="#92400E">🧠 AI CAREER ARCHITECT</text>
+      
+      <text x="16" y="64" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#0F172A">Precision Gap Diagnostic</text>
+      <text x="16" y="86" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">• Quantitative skills gap %</text>
+      <text x="16" y="106" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">• Phased milestone schedules</text>
+      <text x="16" y="126" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">• Production capstone specs</text>
+      
+      <rect x="16" y="150" width="223" height="88" rx="8" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1"/>
+      <text x="24" y="174" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#B45309">AI Engine Support:</text>
+      <text x="24" y="196" font-family="system-ui, sans-serif" font-size="11" fill="#92400E">• Google Gemini 1.5 Flash</text>
+      <text x="24" y="218" font-family="system-ui, sans-serif" font-size="11" fill="#92400E">• Structured Zod Schema</text>
+    </g>
+
+    <!-- Box 2: Supabase Security -->
+    <g transform="translate(275, 0)" filter="url(#li-shadow)">
+      <rect width="255" height="260" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+      <rect width="255" height="36" rx="12" fill="#F0FDF4"/>
+      <path d="M 0 26 L 0 36 L 255 36 L 255 26 Z" fill="#F0FDF4"/>
+      <text x="14" y="23" font-family="system-ui, sans-serif" font-size="12" font-weight="800" fill="#166534">🔐 SUPABASE RLS SECURITY</text>
+      
+      <text x="16" y="64" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#0F172A">Tenant Isolation</text>
+      <text x="16" y="86" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">• Locked to auth.uid()</text>
+      <text x="16" y="106" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">• Subquery check on tasks</text>
+      <text x="16" y="126" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">• 1-Click Reviewer Demo</text>
+
+      <rect x="16" y="150" width="223" height="88" rx="8" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
+      <text x="24" y="174" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#065F46">Security Highlights:</text>
+      <text x="24" y="196" font-family="system-ui, sans-serif" font-size="11" fill="#047857">• OWASP ASVS Verified</text>
+      <text x="24" y="218" font-family="system-ui, sans-serif" font-size="11" fill="#047857">• Zero credential leaks</text>
+    </g>
+
+    <!-- Box 3: Modern Tech Stack -->
+    <g transform="translate(550, 0)" filter="url(#li-shadow)">
+      <rect width="255" height="260" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+      <rect width="255" height="36" rx="12" fill="#EEF2FF"/>
+      <path d="M 0 26 L 0 36 L 255 36 L 255 26 Z" fill="#EEF2FF"/>
+      <text x="14" y="23" font-family="system-ui, sans-serif" font-size="12" font-weight="800" fill="#3730A3">⚡ MODERN NEXT.JS STACK</text>
+      
+      <text x="16" y="64" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#0F172A">Next.js 15 App Router</text>
+      <text x="16" y="86" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">• React 19 architecture</text>
+      <text x="16" y="106" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">• Tailwind CSS v4 styling</text>
+      <text x="16" y="126" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">• Turbopack rapid builds</text>
+
+      <rect x="16" y="150" width="223" height="88" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="24" y="174" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#1E293B">Design &amp; UI Polish:</text>
+      <text x="24" y="196" font-family="system-ui, sans-serif" font-size="11" fill="#475569">• Isomorphic Theme Sync</text>
+      <text x="24" y="218" font-family="system-ui, sans-serif" font-size="11" fill="#475569">• Optimistic UI updates</text>
+    </g>
+
+    <!-- Box 4: Verified Automation -->
+    <g transform="translate(825, 0)" filter="url(#li-shadow)">
+      <rect width="255" height="260" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+      <rect width="255" height="36" rx="12" fill="#F1F5F9"/>
+      <path d="M 0 26 L 0 36 L 255 36 L 255 26 Z" fill="#F1F5F9"/>
+      <text x="14" y="23" font-family="system-ui, sans-serif" font-size="12" font-weight="800" fill="#334155">🧪 100% AUTOMATED TESTS</text>
+      
+      <text x="16" y="64" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#0F172A">9/9 Tests Passing</text>
+      <text x="16" y="86" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">• AI schema validation</text>
+      <text x="16" y="106" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">• Anti-abuse rate limiting</text>
+      <text x="16" y="126" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">• RLS isolation verification</text>
+
+      <rect x="16" y="150" width="223" height="88" rx="8" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+      <text x="24" y="174" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#166534">Production Deployment:</text>
+      <text x="24" y="196" font-family="system-ui, sans-serif" font-size="11" fill="#15803D">• Vercel Edge Serverless</text>
+      <text x="24" y="218" font-family="system-ui, sans-serif" font-size="11" fill="#15803D">• Zero downtime pipelines</text>
+    </g>
+  </g>
+
+  <!-- Bottom Author & Repo Footer -->
+  <g transform="translate(60, 520)">
+    <rect width="1080" height="64" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" filter="url(#li-shadow)"/>
+    
+    <!-- Left: Author -->
+    <text x="24" y="38" font-family="system-ui, sans-serif" font-size="14.5" font-weight="800" fill="#0F172A">
+      Engineered by vijaymahes9080 <tspan fill="#64748B" font-weight="500"> | Datheon Vibe Coding Mastery &amp; Capstone Project</tspan>
+    </text>
+
+    <!-- Right: GitHub Link Badge -->
+    <rect x="730" y="14" width="326" height="36" rx="8" fill="#0F172A"/>
+    <text x="750" y="37" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">
+      github.com/vijaymahes9080/Datheon_Vibe...
+    </text>
+  </g>
+</svg>
