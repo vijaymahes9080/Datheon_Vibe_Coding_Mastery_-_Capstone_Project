@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440">
+  <defs>
+    <linearGradient id="wf-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="50%" stop-color="#EEF2FF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <filter id="wf-shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#0F172A" flood-opacity="0.07"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="440" fill="url(#wf-bg)"/>
+
+  <!-- Title Header -->
+  <g transform="translate(60, 48)">
+    <text font-family="system-ui, sans-serif" font-size="28" font-weight="900" fill="#0F172A" letter-spacing="-0.5">
+      🚀 3-Step Career Acceleration Pipeline
+    </text>
+    <text y="28" font-family="system-ui, sans-serif" font-size="14.5" font-weight="500" fill="#64748B">
+      From raw engineering ambitions to enterprise-grade portfolio execution in minutes
+    </text>
+  </g>
+
+  <!-- Step 1 Card -->
+  <g transform="translate(60, 110)" filter="url(#wf-shadow)">
+    <rect width="330" height="280" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <!-- Step Badge -->
+    <rect x="20" y="20" width="80" height="28" rx="14" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1"/>
+    <text x="34" y="38" font-family="system-ui, sans-serif" font-size="12" font-weight="800" fill="#4338CA">STEP 01</text>
+    
+    <text x="20" y="80" font-family="system-ui, sans-serif" font-size="18" font-weight="800" fill="#0F172A">Profile &amp; Ambition Input</text>
+    <text x="20" y="104" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#64748B">Specify your baseline and goals</text>
+
+    <g transform="translate(20, 126)">
+      <rect width="290" height="40" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <circle cx="16" cy="20" r="4" fill="#4F46E5"/>
+      <text x="28" y="24" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Current Skills (React, TS, SQL)</text>
+    </g>
+
+    <g transform="translate(20, 174)">
+      <rect width="290" height="40" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <circle cx="16" cy="20" r="4" fill="#2563EB"/>
+      <text x="28" y="24" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Dream Target Role &amp; Tier</text>
+    </g>
+
+    <g transform="translate(20, 222)">
+      <rect width="290" height="40" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <circle cx="16" cy="20" r="4" fill="#10B981"/>
+      <text x="28" y="24" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Weekly Time Budget (8-20 hrs)</text>
+    </g>
+  </g>
+
+  <!-- Connector Arrow 1 -> 2 -->
+  <g transform="translate(402, 235)">
+    <line x1="0" y1="0" x2="24" y2="0" stroke="#4F46E5" stroke-width="3"/>
+    <polygon points="24,0 16,-6 16,6" fill="#4F46E5"/>
+  </g>
+
+  <!-- Step 2 Card -->
+  <g transform="translate(435, 110)" filter="url(#wf-shadow)">
+    <rect width="330" height="280" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <!-- Step Badge -->
+    <rect x="20" y="20" width="80" height="28" rx="14" fill="#FEF3C7" stroke="#FDE68A" stroke-width="1"/>
+    <text x="34" y="38" font-family="system-ui, sans-serif" font-size="12" font-weight="800" fill="#92400E">STEP 02</text>
+    
+    <text x="20" y="80" font-family="system-ui, sans-serif" font-size="18" font-weight="800" fill="#0F172A">AI Diagnostic &amp; Synthesis</text>
+    <text x="20" y="104" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#64748B">Multi-provider structured reasoning</text>
+
+    <g transform="translate(20, 126)">
+      <rect width="290" height="40" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <circle cx="16" cy="20" r="4" fill="#D97706"/>
+      <text x="28" y="24" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Quantitative Skills Gap %</text>
+    </g>
+
+    <g transform="translate(20, 174)">
+      <rect width="290" height="40" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <circle cx="16" cy="20" r="4" fill="#7C3AED"/>
+      <text x="28" y="24" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Phased Milestone Curricula</text>
+    </g>
+
+    <g transform="translate(20, 222)">
+      <rect width="290" height="40" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <circle cx="16" cy="20" r="4" fill="#2563EB"/>
+      <text x="28" y="24" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Production Capstone Specs</text>
+    </g>
+  </g>
+
+  <!-- Connector Arrow 2 -> 3 -->
+  <g transform="translate(777, 235)">
+    <line x1="0" y1="0" x2="24" y2="0" stroke="#059669" stroke-width="3"/>
+    <polygon points="24,0 16,-6 16,6" fill="#059669"/>
+  </g>
+
+  <!-- Step 3 Card -->
+  <g transform="translate(810, 110)" filter="url(#wf-shadow)">
+    <rect width="330" height="280" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <!-- Step Badge -->
+    <rect x="20" y="20" width="80" height="28" rx="14" fill="#DCFCE7" stroke="#86EFAC" stroke-width="1"/>
+    <text x="34" y="38" font-family="system-ui, sans-serif" font-size="12" font-weight="800" fill="#166534">STEP 03</text>
+    
+    <text x="20" y="80" font-family="system-ui, sans-serif" font-size="18" font-weight="800" fill="#0F172A">Studio Execution &amp; Track</text>
+    <text x="20" y="104" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#64748B">Persistent Supabase task management</text>
+
+    <g transform="translate(20, 126)">
+      <rect width="290" height="40" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <circle cx="16" cy="20" r="4" fill="#059669"/>
+      <text x="28" y="24" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#1E293B">1-Click Roadmap Database Sync</text>
+    </g>
+
+    <g transform="translate(20, 174)">
+      <rect width="290" height="40" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <circle cx="16" cy="20" r="4" fill="#10B981"/>
+      <text x="28" y="24" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Optimistic Task Checklists</text>
+    </g>
+
+    <g transform="translate(20, 222)">
+      <rect width="290" height="40" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <circle cx="16" cy="20" r="4" fill="#3B82F6"/>
+      <text x="28" y="24" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#1E293B">Real-time Velocity Gauges</text>
+    </g>
+  </g>
+</svg>

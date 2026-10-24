@@ -1,0 +1,246 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
+  <defs>
+    <linearGradient id="arch-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#EFF6FF"/>
+    </linearGradient>
+    <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+    <pattern id="arch-dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#CBD5E1" opacity="0.5"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="700" fill="url(#arch-bg)"/>
+  <rect width="1200" height="700" fill="url(#arch-dots)"/>
+
+  <!-- Title Header -->
+  <g transform="translate(60, 48)">
+    <text font-family="system-ui, sans-serif" font-size="28" font-weight="900" fill="#0F172A" letter-spacing="-0.5">
+      🏗️ SkillForge AI — System Architecture &amp; Data Pipeline
+    </text>
+    <text y="28" font-family="system-ui, sans-serif" font-size="14.5" font-weight="500" fill="#64748B">
+      Full-Stack Micro-SaaS: Next.js 15 App Router • PostgreSQL RLS Security • Multi-Provider AI Inference
+    </text>
+  </g>
+
+  <!-- 4 Architecture Columns / Tiers -->
+
+  <!-- 1. CLIENT TIER (Left) -->
+  <g transform="translate(60, 110)" filter="url(#card-shadow)">
+    <rect width="250" height="490" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="250" height="42" rx="12" fill="#EEF2FF"/>
+    <path d="M 0 32 L 0 42 L 250 42 L 250 32 Z" fill="#EEF2FF"/>
+    <line x1="0" y1="42" x2="250" y2="42" stroke="#C7D2FE" stroke-width="1"/>
+    <text x="16" y="26" font-family="system-ui, sans-serif" font-size="13" font-weight="800" fill="#3730A3">1. CLIENT APPLICATION</text>
+
+    <!-- Component 1 -->
+    <g transform="translate(14, 56)">
+      <rect width="222" height="72" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="12" y="22" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0F172A">Landing Page (page.tsx)</text>
+      <text x="12" y="40" font-family="system-ui, sans-serif" font-size="11" fill="#475569">• Hero, FAQ &amp; Features</text>
+      <text x="12" y="58" font-family="system-ui, sans-serif" font-size="11" fill="#475569">• Interactive Dashboard Preview</text>
+    </g>
+
+    <!-- Component 2 -->
+    <g transform="translate(14, 138)">
+      <rect width="222" height="72" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="12" y="22" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0F172A">Career Architect Wizard</text>
+      <text x="12" y="40" font-family="system-ui, sans-serif" font-size="11" fill="#475569">• Skills input &amp; role select</text>
+      <text x="12" y="58" font-family="system-ui, sans-serif" font-size="11" fill="#475569">• Real-time prompt streaming</text>
+    </g>
+
+    <!-- Component 3 -->
+    <g transform="translate(14, 220)">
+      <rect width="222" height="72" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="12" y="22" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0F172A">Studio Task Manager</text>
+      <text x="12" y="40" font-family="system-ui, sans-serif" font-size="11" fill="#475569">• Optimistic state updates</text>
+      <text x="12" y="58" font-family="system-ui, sans-serif" font-size="11" fill="#475569">• Priority filter &amp; checklists</text>
+    </g>
+
+    <!-- Component 4 -->
+    <g transform="translate(14, 302)">
+      <rect width="222" height="72" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="12" y="22" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0F172A">Isomorphic Providers</text>
+      <text x="12" y="40" font-family="system-ui, sans-serif" font-size="11" fill="#475569">• ThemeContext (Dark/Light)</text>
+      <text x="12" y="58" font-family="system-ui, sans-serif" font-size="11" fill="#475569">• AuthContext (1-Click Demo)</text>
+    </g>
+
+    <!-- Bottom Badge -->
+    <g transform="translate(14, 436)">
+      <rect width="222" height="38" rx="6" fill="#F1F5F9"/>
+      <text x="24" y="24" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#334155">React 19 • Tailwind v4 • Next 15</text>
+    </g>
+  </g>
+
+  <!-- Flow Arrow 1 -> 2 -->
+  <g transform="translate(315, 330)">
+    <line x1="0" y1="0" x2="35" y2="0" stroke="#4F46E5" stroke-width="2.5" stroke-dasharray="4,3"/>
+    <polygon points="35,0 27,-5 27,5" fill="#4F46E5"/>
+    <rect x="-8" y="-22" width="52" height="16" rx="4" fill="#EEF2FF"/>
+    <text x="-4" y="-10" font-family="system-ui, monospace" font-size="9" font-weight="700" fill="#4338CA">HTTPS</text>
+  </g>
+
+  <!-- 2. API & GATEWAY TIER (Middle-Left) -->
+  <g transform="translate(355, 110)" filter="url(#card-shadow)">
+    <rect width="250" height="490" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="250" height="42" rx="12" fill="#F0FDF4"/>
+    <path d="M 0 32 L 0 42 L 250 42 L 250 32 Z" fill="#F0FDF4"/>
+    <line x1="0" y1="42" x2="250" y2="42" stroke="#BBF7D0" stroke-width="1"/>
+    <text x="16" y="26" font-family="system-ui, sans-serif" font-size="13" font-weight="800" fill="#166534">2. API &amp; GATEWAY</text>
+
+    <!-- Component 1 -->
+    <g transform="translate(14, 56)">
+      <rect width="222" height="72" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="12" y="22" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0F172A">Next.js Middleware</text>
+      <text x="12" y="40" font-family="system-ui, sans-serif" font-size="11" fill="#475569">• Session cookie synchronization</text>
+      <text x="12" y="58" font-family="system-ui, sans-serif" font-size="11" fill="#475569">• Protected route guards</text>
+    </g>
+
+    <!-- Component 2 -->
+    <g transform="translate(14, 138)">
+      <rect width="222" height="72" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="12" y="22" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0F172A">IP Rate-Limiting Engine</text>
+      <text x="12" y="40" font-family="system-ui, sans-serif" font-size="11" fill="#475569">• 5 requests/min sliding window</text>
+      <text x="12" y="58" font-family="system-ui, sans-serif" font-size="11" fill="#475569">• Anti-DDoS &amp; spam throttle</text>
+    </g>
+
+    <!-- Component 3 -->
+    <g transform="translate(14, 220)">
+      <rect width="222" height="72" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="12" y="22" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0F172A">/api/ai/architect</text>
+      <text x="12" y="40" font-family="system-ui, sans-serif" font-size="11" fill="#475569">• Auth verification check</text>
+      <text x="12" y="58" font-family="system-ui, sans-serif" font-size="11" fill="#475569">• Multi-provider dispatcher</text>
+    </g>
+
+    <!-- Component 4 -->
+    <g transform="translate(14, 302)">
+      <rect width="222" height="72" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+      <text x="12" y="22" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#0F172A">Zod Schema Validator</text>
+      <text x="12" y="40" font-family="system-ui, sans-serif" font-size="11" fill="#475569">• Output shape guarantee</text>
+      <text x="12" y="58" font-family="system-ui, sans-serif" font-size="11" fill="#475569">• Zero malformed JSON spills</text>
+    </g>
+
+    <!-- Bottom Badge -->
+    <g transform="translate(14, 436)">
+      <rect width="222" height="38" rx="6" fill="#F1F5F9"/>
+      <text x="24" y="24" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#334155">OWASP ASVS Verified • Secure</text>
+    </g>
+  </g>
+
+  <!-- Flow Arrow 2 -> 3 (Supabase) -->
+  <g transform="translate(610, 240)">
+    <line x1="0" y1="0" x2="35" y2="0" stroke="#059669" stroke-width="2.5"/>
+    <polygon points="35,0 27,-5 27,5" fill="#059669"/>
+    <rect x="-8" y="-22" width="52" height="16" rx="4" fill="#DCFCE7"/>
+    <text x="-5" y="-10" font-family="system-ui, monospace" font-size="9" font-weight="700" fill="#166534">Postgres</text>
+  </g>
+
+  <!-- Flow Arrow 2 -> 4 (AI Engine) -->
+  <g transform="translate(610, 440)">
+    <line x1="0" y1="0" x2="35" y2="0" stroke="#D97706" stroke-width="2.5"/>
+    <polygon points="35,0 27,-5 27,5" fill="#D97706"/>
+    <rect x="-8" y="-22" width="52" height="16" rx="4" fill="#FEF3C7"/>
+    <text x="-4" y="-10" font-family="system-ui, monospace" font-size="9" font-weight="700" fill="#92400E">AI REST</text>
+  </g>
+
+  <!-- 3. SUPABASE PERSISTENCE TIER (Top-Right) -->
+  <g transform="translate(650, 110)" filter="url(#card-shadow)">
+    <rect width="490" height="230" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="490" height="42" rx="12" fill="#F0FDF4"/>
+    <path d="M 0 32 L 0 42 L 490 42 L 490 32 Z" fill="#F0FDF4"/>
+    <line x1="0" y1="42" x2="490" y2="42" stroke="#BBF7D0" stroke-width="1"/>
+    <text x="16" y="26" font-family="system-ui, sans-serif" font-size="13" font-weight="800" fill="#166534">3. SUPABASE DATA LAYER (PostgreSQL + RLS)</text>
+
+    <!-- Table Grid -->
+    <g transform="translate(16, 56)">
+      <!-- Table 1 -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="145" height="74" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+        <text x="10" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#0F172A">auth.users</text>
+        <text x="10" y="38" font-family="system-ui, sans-serif" font-size="10" fill="#64748B">• UUID primary key</text>
+        <text x="10" y="54" font-family="system-ui, sans-serif" font-size="10" fill="#64748B">• Cookie session auth</text>
+      </g>
+
+      <!-- Table 2 -->
+      <g transform="translate(155, 0)">
+        <rect x="0" y="0" width="145" height="74" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+        <text x="10" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#0F172A">roadmaps</text>
+        <text x="10" y="38" font-family="system-ui, sans-serif" font-size="10" fill="#64748B">• Locked to user_id</text>
+        <text x="10" y="54" font-family="system-ui, sans-serif" font-size="10" fill="#64748B">• RLS tenant isolation</text>
+      </g>
+
+      <!-- Table 3 -->
+      <g transform="translate(310, 0)">
+        <rect x="0" y="0" width="145" height="74" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+        <text x="10" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#0F172A">roadmap_tasks</text>
+        <text x="10" y="38" font-family="system-ui, sans-serif" font-size="10" fill="#64748B">• Subquery verification</text>
+        <text x="10" y="54" font-family="system-ui, sans-serif" font-size="10" fill="#64748B">• Optimistic checkbox</text>
+      </g>
+    </g>
+
+    <!-- Bottom RLS Note -->
+    <g transform="translate(16, 145)">
+      <rect width="455" height="66" rx="6" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1"/>
+      <text x="14" y="24" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#065F46">🔒 Cryptographic Row-Level Security (RLS) Guarantee:</text>
+      <text x="14" y="44" font-family="system-ui, sans-serif" font-size="10.5" fill="#047857">"Users can strictly view, mutate, and delete ONLY their own roadmaps. Foreign tasks cannot be injected."</text>
+    </g>
+  </g>
+
+  <!-- 4. AI INFERENCE TIER (Bottom-Right) -->
+  <g transform="translate(650, 360)" filter="url(#card-shadow)">
+    <rect width="490" height="240" rx="12" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+    <rect width="490" height="42" rx="12" fill="#FEF3C7"/>
+    <path d="M 0 32 L 0 42 L 490 42 L 490 32 Z" fill="#FEF3C7"/>
+    <line x1="0" y1="42" x2="490" y2="42" stroke="#FDE68A" stroke-width="1"/>
+    <text x="16" y="26" font-family="system-ui, sans-serif" font-size="13" font-weight="800" fill="#92400E">4. MULTI-PROVIDER AI ADAPTER ENGINE</text>
+
+    <!-- AI Providers Grid -->
+    <g transform="translate(16, 56)">
+      <!-- AI 1 -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="145" height="85" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+        <text x="10" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#0F172A">Google Gemini</text>
+        <text x="10" y="38" font-family="system-ui, sans-serif" font-size="10" fill="#D97706">• 1.5 Flash / 2.0</text>
+        <text x="10" y="54" font-family="system-ui, sans-serif" font-size="10" fill="#64748B">• High-velocity reasoning</text>
+        <text x="10" y="70" font-family="system-ui, sans-serif" font-size="10" fill="#16A34A">● Primary Active</text>
+      </g>
+
+      <!-- AI 2 -->
+      <g transform="translate(155, 0)">
+        <rect x="0" y="0" width="145" height="85" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+        <text x="10" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#0F172A">OpenAI GPT-4o</text>
+        <text x="10" y="38" font-family="system-ui, sans-serif" font-size="10" fill="#2563EB">• GPT-4o-mini engine</text>
+        <text x="10" y="54" font-family="system-ui, sans-serif" font-size="10" fill="#64748B">• Structured JSON mode</text>
+        <text x="10" y="70" font-family="system-ui, sans-serif" font-size="10" fill="#4B5563">○ Secondary Fallback</text>
+      </g>
+
+      <!-- AI 3 -->
+      <g transform="translate(310, 0)">
+        <rect x="0" y="0" width="145" height="85" rx="6" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+        <text x="10" y="20" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#0F172A">Deterministic</text>
+        <text x="10" y="38" font-family="system-ui, sans-serif" font-size="10" fill="#7C3AED">• Zero-credential engine</text>
+        <text x="10" y="54" font-family="system-ui, sans-serif" font-size="10" fill="#64748B">• Instant mock generation</text>
+        <text x="10" y="70" font-family="system-ui, sans-serif" font-size="10" fill="#2563EB">● Test Suite Ready</text>
+      </g>
+    </g>
+
+    <!-- Bottom AI Specs -->
+    <g transform="translate(16, 155)">
+      <rect width="455" height="68" rx="6" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1"/>
+      <text x="14" y="24" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#B45309">⚡ Intelligent Output Transformation:</text>
+      <text x="14" y="44" font-family="system-ui, sans-serif" font-size="10.5" fill="#92400E">1. Skills Gap Diagnostic (%)  →  2. Phased Learning Curriculum  →  3. Production Capstone Spec</text>
+      <text x="14" y="60" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600" fill="#B45309">1-Click direct synchronization into active Supabase database records.</text>
+    </g>
+  </g>
+
+  <!-- Bottom Global Trust Bar -->
+  <g transform="translate(60, 625)">
+    <rect width="1080" height="42" rx="8" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+    <text x="24" y="26" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#1E293B">Security &amp; Reliability Gates:</text>
+    <text x="220" y="26" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">✓ 100% Automated Tests Passed (9/9)</text>
+    <text x="490" y="26" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">✓ Zero Secret Leakage to Client</text>
+    <text x="730" y="26" font-family="system-ui, sans-serif" font-size="11.5" fill="#475569">✓ Vercel Edge Serverless Deployment</text>
+  </g>
+</svg>
