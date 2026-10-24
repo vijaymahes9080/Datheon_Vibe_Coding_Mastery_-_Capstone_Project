@@ -8,53 +8,49 @@
 [![Google Gemini](https://img.shields.io/badge/AI_Engine-Gemini_1.5_Flash-orange?logo=google)](https://aistudio.google.com/)
 [![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen)]()
 [![Automated Tests](https://img.shields.io/badge/Tests-9%2F9_Passed-brightgreen)]()
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+---
+
+## 🌟 Visual Showcase (Light Theme)
+
+![SkillForge AI Hero Banner](./public/images/skillforge-banner-light.png)
 
 > **Datheon AI Mastery & Capstone Project**  
 > An enterprise-grade, full-stack AI micro-SaaS engineered to help students, fresh graduates, and career-switchers transform raw ambitions into structured learning plans, portfolio projects, and actionable career development roadmaps.
 
----
-
-## 🌟 Key Features
-
-### 1. 🚀 Responsive Marketing Landing Page
-- **Value Proposition Hero**: Clear problem/solution articulation targeting student-to-senior transitions.
-- **Interactive Dashboard Preview**: Try checking off live roadmap tasks and exploring skills-gap graphs before creating an account.
-- **Feature Showcase**: 6 high-leverage capabilities detailing diagnostics, milestones, and security.
-- **3-Step Acceleration Workflow**: Step-by-step guidance through definition, AI synthesis, and shipping.
-- **Audience Matrix**: Tailored solutions for Computer Science students, fresh graduates, career switchers, and engineers pivoting to AI.
-- **Interactive FAQ**: Comprehensive answers regarding AI models, data privacy, and portfolio deliverables.
-- **Persistent Theme Toggle**: Seamless dark and light surfaces respecting user preferences via `localStorage`.
-
-### 2. 📝 Lead Capture Engine
-- Validates name, email, and optional career aspirations with client-side and server-side checks.
-- Rate-limiting protection (5 submissions/min per IP) and duplicate suppression within 5 minutes.
-- Direct persistence to Supabase `leads` table with fallback local caching.
-
-### 3. 🔐 Enterprise Authentication & Data Isolation (Supabase RLS)
-- Complete registration, login, logout, and persistent session synchronization.
-- **1-Click Reviewer Demo Account**: Instant test access to the full dashboard without entering credentials.
-- **PostgreSQL Row-Level Security (RLS)**: Enforces strict cryptographic isolation where users can only view, create, update, and delete their own roadmaps and tasks.
-- Cross-tenant cascade protection ensuring tasks cannot be attached to foreign roadmaps.
-
-### 4. 📊 Personal Engineering Dashboard & Task Studio
-- High-level metric gauges: Active Roadmaps, Tasks Completed, Overall Velocity, and Capstone Readiness.
-- Roadmap collection grid with status filtering (`All`, `Active`, `Completed`).
-- Full CRUD operations: Create custom roadmaps, edit descriptions, toggle completion states, and delete roadmaps.
-- Granular task manager with optimistic completion checkboxes, priority badges (`High`, `Medium`, `Low`), and due date tracking.
-
-### 5. 🧠 SkillForge AI Career Architect
-- **Inputs**: Current skills toolbelt, target dream role, experience tier, weekly available study hours, and project interests.
-- **Outputs**:
-  - Concise skills-gap analysis with quantitative proficiency percentages.
-  - Phased learning milestones with completion criteria and time estimates.
-  - Production-grade portfolio capstone blueprint with architecture summary, recommended stack, and key deliverables.
-  - Actionable weekly tasks and potential challenges.
-- **1-Click Import**: Converts AI recommendations into active, trackable dashboard roadmaps and database tasks instantly.
-- **Multi-Provider Resilience**: Supports Google Gemini 1.5/2.0, OpenAI GPT-4o, and deterministic offline fallback.
+*Direct Asset Links: [High-Resolution PNG](./public/images/skillforge-banner-light.png) | [Scalable Vector SVG](./public/images/skillforge-banner-light.svg)*
 
 ---
 
-## 🏗️ System Architecture
+## 🚀 3-Step Acceleration Pipeline
+
+![SkillForge AI 3-Step Career Acceleration Pipeline](./public/images/workflow-pipeline-light.png)
+
+1. **Profile & Ambition Input**: Input current tools (React, TypeScript, Python, SQL), target dream role, and weekly time budget (8–20 hrs/week).
+2. **AI Diagnostic & Synthesis**: High-velocity reasoning via Google Gemini 1.5 Flash (with OpenAI fallback and deterministic offline engine) generates quantitative gap percentages, phased milestones, and production capstone specifications.
+3. **Studio Execution & Tracking**: Instant 1-click import into persistent Supabase database roadmaps, optimistic task checklists, and live velocity gauges.
+
+*Direct Asset Links: [High-Resolution PNG](./public/images/workflow-pipeline-light.png) | [Scalable Vector SVG](./public/images/workflow-pipeline-light.svg)*
+
+---
+
+## 📊 Personal Engineering Dashboard & Task Studio
+
+![SkillForge AI Dashboard Studio Preview](./public/images/dashboard-preview-light.png)
+
+- **High-level metric gauges**: Active Roadmaps (3 Active), Tasks Completed (17/20, 85%), Velocity Rate (85%), and Capstone Readiness (Ready to Ship).
+- **Roadmap collection grid**: Status filtering (`All`, `Active`, `Completed`), custom roadmap creation, and optimistic checkbox completion.
+- **Granular task manager**: Priority badges (`High`, `Medium`, `Low`), milestone groupings, and due date tracking.
+- **1-Click Reviewer Demo Account**: Instant test access without credentials or signup friction.
+
+*Direct Asset Links: [High-Resolution PNG](./public/images/dashboard-preview-light.png) | [Scalable Vector SVG](./public/images/dashboard-preview-light.svg)*
+
+---
+
+## 🏗️ System Architecture & Data Pipeline
+
+![SkillForge AI System Architecture](./public/images/architecture-diagram-light.png)
 
 ```
 +-------------------------------------------------------------------------------+
@@ -89,7 +85,54 @@
 +-------------------------------+
 ```
 
-For detailed sequence diagrams, see [ARCHITECTURE.md](ARCHITECTURE.md).
+*Direct Asset Links: [High-Resolution PNG](./public/images/architecture-diagram-light.png) | [Scalable Vector SVG](./public/images/architecture-diagram-light.svg)*  
+*Detailed Architecture Specifications: See [ARCHITECTURE.md](ARCHITECTURE.md).*
+
+---
+
+## 📢 LinkedIn Featured Project Showcase
+
+![SkillForge AI LinkedIn Showcase Banner](./public/images/linkedin-showcase-light.png)
+
+A comprehensive release package and video demonstration script are prepared in **[LINKEDIN.md](LINKEDIN.md)**:
+- **Featured Image Banner**: [`LINKEDIN_SHOWCASE.png`](LINKEDIN_SHOWCASE.png) (2400 × 1260 Retina 2x Light Theme)
+- **Vector Source**: [`public/images/linkedin-showcase-light.svg`](public/images/linkedin-showcase-light.svg)
+- **Ready-to-Publish Caption**: High-engagement LinkedIn post copy with problem statement, architecture highlights, and hashtags.
+- **Video Walkthrough Script**: 2-minute 45-second technical demonstration with timecodes.
+
+---
+
+## 🌟 Complete Feature Matrix
+
+### 1. 🚀 Responsive Marketing Landing Page
+- **Value Proposition Hero**: Clear problem/solution articulation targeting student-to-senior transitions.
+- **Interactive Dashboard Preview**: Try checking off live roadmap tasks and exploring skills-gap graphs before creating an account.
+- **Feature Showcase**: 6 high-leverage capabilities detailing diagnostics, milestones, and security.
+- **3-Step Acceleration Workflow**: Step-by-step guidance through definition, AI synthesis, and shipping.
+- **Audience Matrix**: Tailored solutions for Computer Science students, fresh graduates, career switchers, and engineers pivoting to AI.
+- **Interactive FAQ**: Comprehensive answers regarding AI models, data privacy, and portfolio deliverables.
+- **Persistent Theme Toggle**: Seamless dark and light surfaces respecting user preferences via `localStorage`.
+
+### 2. 📝 Lead Capture Engine
+- Validates name, email, and optional career aspirations with client-side and server-side checks.
+- Rate-limiting protection (5 submissions/min per IP) and duplicate suppression within 5 minutes.
+- Direct persistence to Supabase `leads` table with fallback local caching.
+
+### 3. 🔐 Enterprise Authentication & Data Isolation (Supabase RLS)
+- Complete registration, login, logout, and persistent session synchronization.
+- **1-Click Reviewer Demo Account**: Instant test access to the full dashboard without entering credentials.
+- **PostgreSQL Row-Level Security (RLS)**: Enforces strict cryptographic isolation where users can only view, create, update, and delete their own roadmaps and tasks.
+- Cross-tenant cascade protection ensuring tasks cannot be attached to foreign roadmaps.
+
+### 4. 🧠 SkillForge AI Career Architect
+- **Inputs**: Current skills toolbelt, target dream role, experience tier, weekly available study hours, and project interests.
+- **Outputs**:
+  - Concise skills-gap analysis with quantitative proficiency percentages.
+  - Phased learning milestones with completion criteria and time estimates.
+  - Production-grade portfolio capstone blueprint with architecture summary, recommended stack, and key deliverables.
+  - Actionable weekly tasks and potential challenges.
+- **1-Click Import**: Converts AI recommendations into active, trackable dashboard roadmaps and database tasks instantly.
+- **Multi-Provider Resilience**: Supports Google Gemini 1.5/2.0, OpenAI GPT-4o, and deterministic offline fallback.
 
 ---
 
@@ -145,14 +188,29 @@ For detailed sequence diagrams, see [ARCHITECTURE.md](ARCHITECTURE.md).
 │   └── middleware.ts                  # Route protection & cookie synchronizer
 ├── supabase/
 │   └── migrations/
-│       ├── 20261024000001_initial_schema.sql      # Tables, indexes, & triggers
-│       └── 20261024000002_rls_security_policies.sql # Strict RLS policies
+│       ├── 20261024000001_initial_schema.sql        # Tables, indexes, & triggers
+│       └── 20261024000002_rls_security_policies.sql   # Strict RLS policies
+├── public/
+│   └── images/                        # High-resolution light-theme PNG & SVG assets
+│       ├── skillforge-banner-light.png
+│       ├── skillforge-banner-light.svg
+│       ├── architecture-diagram-light.png
+│       ├── architecture-diagram-light.svg
+│       ├── workflow-pipeline-light.png
+│       ├── workflow-pipeline-light.svg
+│       ├── dashboard-preview-light.png
+│       ├── dashboard-preview-light.svg
+│       ├── linkedin-showcase-light.png
+│       └── linkedin-showcase-light.svg
 ├── scripts/
+│   ├── generate_light_assets.py       # Programmatic vector graphics & 2x rasterizer
 │   └── run-tests.mjs                  # Automated verification test suite
 ├── ARCHITECTURE.md                    # Deep architectural documentation
 ├── SECURITY_CHECKLIST.md              # OWASP ASVS verification & security audit
-├── LINKEDIN_DEMO.md                   # 2-3 minute technical video narration script
-└── .env.example                       # Environment variable template
+├── LINKEDIN.md                        # Official LinkedIn post & video demonstration package
+├── LINKEDIN_SHOWCASE.png              # Root featured image for social media
+├── LICENSE                            # MIT Open Source License
+└── .gitignore                         # Comprehensive Git ignore rules
 ```
 
 ---
@@ -250,12 +308,6 @@ npm run build
    - `SUPABASE_SERVICE_ROLE_KEY`
    - `GEMINI_API_KEY` (or `OPENAI_API_KEY`)
 4. Click **Deploy**. Vercel will run `npm run build` with Turbopack and deploy to an edge-accelerated HTTPS URL.
-
----
-
-## 🤝 Demonstration & Video Walkthrough
-
-A 2-3 minute technical video walkthrough script and LinkedIn release caption are ready in [LINKEDIN_DEMO.md](LINKEDIN_DEMO.md).
 
 ---
 
