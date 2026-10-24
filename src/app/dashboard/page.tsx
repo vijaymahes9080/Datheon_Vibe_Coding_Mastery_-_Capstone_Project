@@ -80,7 +80,7 @@ export default function DashboardPage() {
                 Engineering Workspace
               </Badge>
               <span className="text-xs text-slate-400 font-medium">
-                {new Date().toLocaleDateString(undefined, { weekday: "long", month: "short", day: "numeric" })}
+                Active Sprint
               </span>
             </div>
             <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">

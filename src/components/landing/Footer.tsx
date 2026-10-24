@@ -1,6 +1,5 @@
 import React from "react";
-import Link from "next/link";
-import { Sparkles, Github, Linkedin, Twitter, ShieldCheck } from "lucide-react";
+import { Sparkles, ShieldCheck, Globe, Code, Share2 } from "lucide-react";
 
 export const Footer: React.FC = () => {
   return (
@@ -29,25 +28,25 @@ export const Footer: React.FC = () => {
                 aria-label="GitHub Repository"
                 className="p-2 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
               >
-                <Github className="w-4 h-4" />
+                <Code className="w-4 h-4" />
               </a>
               <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noreferrer"
-                aria-label="LinkedIn Profile"
+                aria-label="LinkedIn"
                 className="p-2 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
               >
-                <Linkedin className="w-4 h-4" />
+                <Globe className="w-4 h-4" />
               </a>
               <a
                 href="https://twitter.com"
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Twitter"
+                aria-label="Share"
                 className="p-2 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
               >
-                <Twitter className="w-4 h-4" />
+                <Share2 className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -128,7 +127,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 dark:text-slate-500">
-          <p>© {new Date().getFullYear()} SkillForge AI. All rights reserved.</p>
+          <p>© 2026 SkillForge AI. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <span>Built for Datheon AI Mastery Capstone</span>
             <span className="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700" />
